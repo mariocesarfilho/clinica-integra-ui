@@ -1,5 +1,10 @@
+import { useState } from "react";
 
 export const Login = () => {
+
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+
     return (
 <div className="max-w-sm mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-100">
     <form className="space-y-5">
@@ -10,6 +15,7 @@ export const Login = () => {
             </label>
             <input 
                 type="email" 
+                value={email}
                 required 
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="seu@email.com"
@@ -22,6 +28,7 @@ export const Login = () => {
             </label>
             <input 
                 type="password" 
+                value={password}
                 required
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                 placeholder="••••••••"/>
