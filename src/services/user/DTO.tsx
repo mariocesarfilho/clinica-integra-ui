@@ -1,8 +1,14 @@
-export interface PayloadLoginUserRequest {
-    email: string,
-    password: string
-}
+export interface PayloadLoginUserRequestDTO {
+    email: string;
+    password: string;
+};
 
-export interface PayloadLoginUserResponse {
-    
-}
+export interface PayloadLoginUserResponseDTO {
+    token: string;
+};
+
+export interface PayloadLoginUserReturnDTO {
+    success: boolean;
+    message: string;
+    data: PayloadLoginUserResponseDTO | null;
+};
