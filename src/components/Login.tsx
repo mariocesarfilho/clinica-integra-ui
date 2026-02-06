@@ -14,7 +14,9 @@ export const Login = () => {
         const response = await postUserByLogin(payload);
 
         if (response.success) {
-            
+            console.log("Sucesso!", response.data?.token);
+        }else {
+            console.log("Erro!", response.message);
         }
     }
 
