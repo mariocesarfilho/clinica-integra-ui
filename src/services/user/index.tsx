@@ -4,7 +4,11 @@ import type { PayloadLoginUserRequestDTO, PayloadLoginUserResponseDTO, PayloadLo
 
 export const postUserByLogin = async (payload: PayloadLoginUserRequestDTO):Promise<PayloadLoginUserReturnDTO> => {
     try{
-        const response = await api.post<PayloadLoginUserResponseDTO>("/login", payload);
+        const response = await api.post<PayloadLoginUserResponseDTO>("/sessions", payload);
+
+        console.log(response);
+        console.log("------");
+        console.log(response.data);
 
         return {
             success: true,
@@ -23,7 +27,7 @@ export const postUserByLogin = async (payload: PayloadLoginUserRequestDTO):Promi
         }
         return {
             success: false,
-            message: "Erro ao efetuar login",
+            message: "Erro! Ao efetuar login!",
             data: null
         }
     }
