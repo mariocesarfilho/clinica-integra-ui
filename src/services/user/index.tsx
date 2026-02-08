@@ -3,6 +3,14 @@ import { isAxiosError } from "axios";
 import type { PayloadLoginUserRequestDTO, PayloadLoginUserResponseDTO, PayloadLoginUserReturnDTO } from "./DTO"
 import api from "../../configs/api";
 
+export const postUserByCreateAccount = async () => {
+    try{
+        const response = await api.post('');
+    }catch(e){
+        throw e;
+    }
+}
+
 export const postUserByLogin = async (payload: PayloadLoginUserRequestDTO):Promise<PayloadLoginUserReturnDTO> => {
     try{
         const response = await api.post<PayloadLoginUserResponseDTO>('/sessions', payload);
