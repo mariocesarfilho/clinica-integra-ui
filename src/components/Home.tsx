@@ -1,5 +1,5 @@
 
-export const Homem = () => {
+export const Home = () => {
     return (
         <div>
             <h1>Seja Bem Vindo(a)</h1>
